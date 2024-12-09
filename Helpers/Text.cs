@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace AdventOfCodeTest.Helpers
+namespace AdventOfCode.Helpers
 {
     internal static class Text
     {
@@ -12,7 +12,7 @@ namespace AdventOfCodeTest.Helpers
         public static string FromFile(string folder, string fileName)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = $"AdventOfCodeTest.{folder}.{fileName}";
+            var resourceName = $"AdventOfCode.{folder}.{fileName}";
 
             using var stream = assembly.GetManifestResourceStream(resourceName);
             using StreamReader reader = new(stream);
