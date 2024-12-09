@@ -10,6 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Year_2024\Day3Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Year_2024\Day2Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
