@@ -8,31 +8,6 @@
             return lines.Select(x => x.ToCharArray()).ToArray();
         }
 
-        internal static bool SearchRight(char[][] grid, string phrase, (int y, int x) start)
-        {
-            return SearchForPhrase(grid, phrase, start, (0, 1));
-        }
-
-        internal static bool SearchLeft(char[][] grid, string phrase, (int y, int x) start)
-        {
-            return SearchForPhrase(grid, phrase, start, (0, -1));
-        }
-
-        internal static bool SearchUp(char[][] grid, string phrase, (int y, int x) start)
-        {
-            return SearchForPhrase(grid, phrase, start, (-1, 0));
-        }
-
-        internal static bool SearchDown(char[][] grid, string phrase, (int y, int x) start)
-        {
-            return SearchForPhrase(grid, phrase, start, (1, 0));
-        }
-
-        internal static bool SearchDiagonalDownRight(char[][] grid, string phrase, (int y, int x) start)
-        {
-            return SearchForPhrase(grid, phrase, start, (1, 1));
-        }
-
         internal static IEnumerable<bool> SearchAllDirections(char[][] grid, string phrase, (int y, int x) start)
         {
             for (int y = -1; y <= 1; y++)
