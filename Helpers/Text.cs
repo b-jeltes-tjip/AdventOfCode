@@ -9,7 +9,7 @@ namespace AdventOfCode.Helpers
         /// </summary>
         /// <param name="fileName">File name including the extension (example: file.txt).</param>
         /// <returns>All text from a file within the executing assembly.</returns>
-        public static string FromFile(string folder, string fileName)
+        internal static string FromFile(string folder, string fileName)
         {
             var assembly = Assembly.GetExecutingAssembly();
             var resourceName = $"AdventOfCode.{folder}.{fileName}";
