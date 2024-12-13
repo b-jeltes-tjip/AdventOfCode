@@ -8,8 +8,8 @@ internal class Day5
     // Get the middle number of each update
     // Get total of all middle numbers from correct updates
 
-    [TestCase("InputDay5Example.txt", ExpectedResult = 143)]
-    [TestCase("InputDay5.txt", ExpectedResult = 4135)]
+    [TestCase("Day5InputExample.txt", ExpectedResult = 143)]
+    [TestCase("Day5Input.txt", ExpectedResult = 4135)]
     public int PartOne(string fileName)
     {
         string fileText = Text.FromFile("Year_2024", fileName);
@@ -50,8 +50,8 @@ internal class Day5
     //[TestCase("InputDay5Example.txt", ExpectedResult = 89)] // Incorrect: all rules with swapping
     //[TestCase("InputDay5Example.txt", ExpectedResult = 73)] // Incorrect: all rules with remove & insert
     //[TestCase("InputDay5Example.txt", ExpectedResult = 105)] // Incorrect: all rules with remove & insert with corrected insertion
-    [TestCase("InputDay5Example.txt", ExpectedResult = 123)]
-    //[TestCase("InputDay5.txt", ExpectedResult = 5285)]
+    [TestCase("Day5InputExample.txt", ExpectedResult = 123)]
+    [TestCase("Day5Input.txt", ExpectedResult = 5285)]
     public int PartTwo(string fileName)
     {
         string fileText = Text.FromFile("Year_2024", fileName);
