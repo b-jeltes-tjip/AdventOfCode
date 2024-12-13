@@ -72,8 +72,6 @@ internal class Day5
 
         var correctedUpdates = updatesInWrongOrder
             .Select(x => new Update() { PageNumbers = x.ApplyRules(orderingRules).ToList() })
-            // initial solution
-            //.Select(x => new Update() { PageNumbers = x.ApplyRules(orderingRules).ToList() })
             ;
 
         return correctedUpdates.Sum(x => x.MiddleNumber);
@@ -131,6 +129,7 @@ internal class Day5
         {
             var resultingList = PageNumbers.ToList();
             // New solution: repeat until correct
+            // This assumes that there are no contradicting rules that would result in an infinite loop
             while (!IsInRightOrder(resultingList, orderingRules))
             {
                 foreach (var rule in orderingRules)
